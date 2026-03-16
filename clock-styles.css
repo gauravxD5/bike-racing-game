@@ -1,0 +1,28 @@
+.clock-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: linear-gradient(135deg, #6e7fd3, #b2c7e0);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.clock-card h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.clock-card p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .clock-card {
+        grid-template-columns: 1fr;
+    }
+}
