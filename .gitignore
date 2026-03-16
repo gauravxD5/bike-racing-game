@@ -1,0 +1,21 @@
+# Ignore compiled files.
+*.o
+*.out
+*.class
+
+# Ignore user-specific files.
+*.user
+*.sublime-project
+*.sublime-workspace
+
+# Node modules for JavaScript projects.
+node_modules/
+
+# Ignore temporary files.
+*.tmp
+*.temp
+
+# Ignore IDE specific files.
+.vscode/
+.idea/
+.DS_Store
