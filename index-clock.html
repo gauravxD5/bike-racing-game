@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Multi-Timezone Clock</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .clock { margin: 20px; font-size: 24px; }
+    </style>
+</head>
+<body>
+    <h1>Digital Multi-Timezone Clock</h1>
+    <div id="clocks">
+        <div class="clock" id="newYork"></div>
+        <div class="clock" id="london"></div>
+        <div class="clock" id="paris"></div>
+        <div class="clock" id="tokyo"></div>
+        <div class="clock" id="sydney"></div>
+        <div class="clock" id="dubai"></div>
+        <div class="clock" id="singapore"></div>
+        <div class="clock" id="mumbai"></div>
+    </div>
+    <script>
+        function updateClocks() {
+            const utc = new Date();
+            document.getElementById('newYork').innerText = 'New York: ' + utc.toLocaleString('en-US', { timeZone: 'America/New_York', hour12: true });
+            document.getElementById('london').innerText = 'London: ' + utc.toLocaleString('en-GB', { timeZone: 'Europe/London', hour12: true });
+            document.getElementById('paris').innerText = 'Paris: ' + utc.toLocaleString('fr-FR', { timeZone: 'Europe/Paris', hour12: true });
+            document.getElementById('tokyo').innerText = 'Tokyo: ' + utc.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour12: true });
+            document.getElementById('sydney').innerText = 'Sydney: ' + utc.toLocaleString('en-AU', { timeZone: 'Australia/Sydney', hour12: true });
+            document.getElementById('dubai').innerText = 'Dubai: ' + utc.toLocaleString('en-AE', { timeZone: 'Asia/Dubai', hour12: true });
+            document.getElementById('singapore').innerText = 'Singapore: ' + utc.toLocaleString('en-SG', { timeZone: 'Asia/Singapore', hour12: true });
+            document.getElementById('mumbai').innerText = 'Mumbai: ' + utc.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true });
+        }
+        setInterval(updateClocks, 1000);
+        updateClocks();
+    </script>
+</body>
+</html>
